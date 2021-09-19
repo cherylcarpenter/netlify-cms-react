@@ -1,7 +1,7 @@
-import React, { FunctionComponent } from "react";
-import { format } from "date-fns";
-import Image, { FluidObject } from "gatsby-image";
-import { Layout } from "../layout";
+import React, { FunctionComponent } from 'react';
+import { format } from 'date-fns';
+import Image, { FluidObject } from 'gatsby-image';
+import { Layout } from '../layout';
 
 interface BlogPost {
   title: string;
@@ -26,7 +26,7 @@ export const BlogPost: FunctionComponent<BlogPost> = ({
           {title}
         </h1>
         <div className="text-center mb-3 text-gray-500">
-          {format(publishedDate, "dd MMM, yyyy")}
+          {format(publishedDate, 'dd MMM, yyyy')}
         </div>
         <div className="text-center mb-3 text-gray-500">
           {tags.map((tag, index) => (

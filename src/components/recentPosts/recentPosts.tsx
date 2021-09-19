@@ -1,6 +1,6 @@
-import React, { FunctionComponent } from "react";
-import { PostSnippet } from "../../types";
-import { PostList } from "../postList";
+import React, { FunctionComponent } from 'react';
+import { PostSnippet } from '../../types';
+import { PostList } from '../postList';
 
 export interface RecentPosts {
   recentPosts: PostSnippet[];

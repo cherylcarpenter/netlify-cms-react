@@ -1,7 +1,7 @@
-import React from "react";
-import Helmet from "react-helmet";
-import { useStaticQuery, graphql } from "gatsby";
-import { join } from "path";
+import React from 'react';
+import Helmet from 'react-helmet';
+import { useStaticQuery, graphql } from 'gatsby';
+import { join } from 'path';
 
 // https://ogp.me/#types
 
@@ -11,18 +11,18 @@ type SEO = {
   meta?: any;
   keywords?: any;
   title: string;
-  type?: "website" | "article" | "blog";
+  type?: 'website' | 'article' | 'blog';
   image?: string;
 };
 
 export const SEO: React.FunctionComponent<SEO> = ({
   description,
-  lang = "en",
+  lang = 'en',
   meta,
   keywords,
   title,
   image,
-  type = "website",
+  type = 'website',
 }) => {
   const {
     site: { siteMetadata },
@@ -37,7 +37,7 @@ export const SEO: React.FunctionComponent<SEO> = ({
           }
         }
       }
-    `
+    `,
   );
 
   const imagePath = image ? join(siteMetadata.siteUrl, image) : undefined;

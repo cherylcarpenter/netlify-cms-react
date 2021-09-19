@@ -1,4 +1,4 @@
-import React, { useState, FunctionComponent } from "react";
+import React, { useState, FunctionComponent } from 'react';
 
 export interface DropdownItem {
   label: string;
@@ -55,7 +55,7 @@ export const FlyoutMenu: FunctionComponent<MenuItemWithDropdown> = ({
       </button>
       <div
         className={`${
-          isOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-1"
+          isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-1'
         } transition ease-in duration-150 absolute -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2`}
       >
         <div className="rounded-lg shadow-lg">
@@ -78,7 +78,7 @@ export const FlyoutMenu: FunctionComponent<MenuItemWithDropdown> = ({
                       </p>
                     </div>
                   </a>
-                )
+                ),
               )}
             </div>
           </div>
@@ -100,7 +100,7 @@ export const MobileFlyoutMenu: FunctionComponent<MenuItemWithDropdown> = ({
       <div
         onClick={toggleIsOpen}
         className={`${
-          isOpen ? "bg-gray-50" : ""
+          isOpen ? 'bg-gray-50' : ''
         } -m-3 p-3 flex items-center space-x-3 rounded-md hover:bg-gray-50 transition ease-in-out duration-150 text-base leading-6 font-medium text-gray-900 justify-between cursor-pointer`}
       >
         <div>{label}</div>
@@ -135,7 +135,7 @@ export const MobileFlyoutMenu: FunctionComponent<MenuItemWithDropdown> = ({
 };
 
 const isMenuItemWithDropdown = (
-  menuItem: MenuItem
+  menuItem: MenuItem,
 ): menuItem is MenuItemWithDropdown => {
   return (menuItem as MenuItemWithDropdown).dropdownItems !== undefined;
 };
@@ -187,7 +187,7 @@ export const Header: FunctionComponent<Header> = ({ menuItems, logo }) => {
                 >
                   {menuItem.label}
                 </a>
-              )
+              ),
             )}
           </nav>
         </div>
@@ -238,7 +238,7 @@ export const Header: FunctionComponent<Header> = ({ menuItems, logo }) => {
                             {menuItem.label}
                           </div>
                         </a>
-                      )
+                      ),
                     )}
                   </nav>
                 </div>

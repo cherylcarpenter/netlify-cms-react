@@ -1,26 +1,26 @@
-import React from "react";
-import { storiesOf } from "@storybook/react";
-import { Header, MenuItem } from "./header";
-import icon from "../../../../static/logo.png";
+import React from 'react';
+import { storiesOf } from '@storybook/react';
+import { Header, MenuItem } from './header';
+import icon from '../../../../static/logo.png';
 
-const story = storiesOf("Components|Layout", module);
+const story = storiesOf('Components|Layout', module);
 
 const data: MenuItem[] = [
   {
-    label: "Home",
-    href: "/",
+    label: 'Home',
+    href: '/',
   },
   {
-    label: "About",
-    href: "/about/",
+    label: 'About',
+    href: '/about/',
   },
   {
-    label: "Services",
+    label: 'Services',
     dropdownItems: [
       {
-        label: "Service A",
-        description: "Service A description",
-        href: "/services/a",
+        label: 'Service A',
+        description: 'Service A description',
+        href: '/services/a',
         icon: (
           <svg
             className="flex-shrink-0 h-6 w-6 text-gray-400"
@@ -38,9 +38,9 @@ const data: MenuItem[] = [
         ),
       },
       {
-        label: "Service B",
-        description: "Service B description",
-        href: "/services/b",
+        label: 'Service B',
+        description: 'Service B description',
+        href: '/services/b',
         icon: (
           <svg
             className="flex-shrink-0 h-6 w-6 text-gray-400"
@@ -60,11 +60,11 @@ const data: MenuItem[] = [
     ],
   },
   {
-    label: "Contact",
-    href: "/contact/",
+    label: 'Contact',
+    href: '/contact/',
   },
 ];
 
 const logo = <img className="w-auto h-15" src={icon} alt="Workflow" />;
 
-story.add("Header", () => <Header menuItems={data} logo={logo} />);
+story.add('Header', () => <Header menuItems={data} logo={logo} />);

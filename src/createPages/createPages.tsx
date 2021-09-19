@@ -1,5 +1,5 @@
-import { CreatePagesArgs } from "gatsby";
-import * as path from "path";
+import { CreatePagesArgs } from 'gatsby';
+import * as path from 'path';
 
 interface PostQuery {
   allMarkdownRemark: {
@@ -46,11 +46,11 @@ export const createPages = async ({
   if (result.errors) {
     // eslint-disable-next-line no-console
     console.error(result.errors);
-    throw new Error("Unexpected error from graphql query during create pages");
+    throw new Error('Unexpected error from graphql query during create pages');
   }
 
   createPage({
-    path: "/",
+    path: '/',
     component: path.resolve(`src/createPages/templates/home.tsx`),
     context: {},
   });
@@ -58,7 +58,7 @@ export const createPages = async ({
   const posts = result.data?.allMarkdownRemark.edges;
   const tagsCollection = new Set<string>();
 
-  if (!posts) throw new Error("No blog posts found");
+  if (!posts) throw new Error('No blog posts found');
 
   posts.forEach((edge) => {
     const {
@@ -69,7 +69,7 @@ export const createPages = async ({
     createPage({
       path: edge.node.fields.slug,
       component: path.resolve(
-        `src/createPages/templates/${edge.node.frontmatter.template}.tsx`
+        `src/createPages/templates/${edge.node.frontmatter.template}.tsx`,
       ),
       context: {
         id,

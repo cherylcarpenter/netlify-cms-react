@@ -1,10 +1,10 @@
-const siteName = "Cheryl Carpenter";
-const siteShortName = "Portfolio Site";
-const siteUrl = "https://geek.sg/";
+const siteName = 'Cheryl Carpenter';
+const siteShortName = 'Portfolio Site';
+const siteUrl = 'https://geek.sg/';
 const siteDescription =
-  "A demo and portfoli site for my development and design work.";
-const siteKeyword = "";
-const siteLogo = "logo.png";
+  'A demo and portfoli site for my development and design work.';
+const siteKeyword = '';
+const siteLogo = 'logo.png';
 const siteLogoFolder = `static/${siteLogo}`;
 
 module.exports = {
@@ -14,23 +14,23 @@ module.exports = {
     description: siteDescription,
   },
   plugins: [
-    "gatsby-plugin-sitemap",
-    "gatsby-plugin-typescript",
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-styled-components",
-    "gatsby-plugin-robots-txt",
+    'gatsby-plugin-sitemap',
+    'gatsby-plugin-typescript',
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-styled-components',
+    'gatsby-plugin-robots-txt',
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/content`,
-        name: "contents",
+        name: 'contents',
       },
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: "images",
+        name: 'images',
         path: `${__dirname}/static`,
       },
     },
@@ -54,10 +54,10 @@ module.exports = {
         ],
       },
     },
-    "gatsby-transformer-sharp",
-    "gatsby-plugin-sharp",
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     {
-      resolve: "gatsby-plugin-manifest",
+      resolve: 'gatsby-plugin-manifest',
       options: {
         name: siteName,
         short_name: siteShortName,
@@ -65,14 +65,14 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#ffffff`,
         display: `standalone`,
-        lang: "en",
-        start_url: "/",
+        lang: 'en',
+        start_url: '/',
         include_favicon: true,
         icon: siteLogoFolder, // This path is relative to the root of the site.
       },
     },
     {
-      resolve: "gatsby-plugin-seo",
+      resolve: 'gatsby-plugin-seo',
       options: {
         siteName,
         defaultSiteImage: siteLogo,
@@ -103,7 +103,7 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-netlify-cms",
+      resolve: 'gatsby-plugin-netlify-cms',
     },
     {
       resolve: `gatsby-plugin-slug`,

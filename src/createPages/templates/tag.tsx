@@ -1,10 +1,10 @@
-import React, { FunctionComponent } from "react";
-import { graphql } from "gatsby";
-import { FluidObject } from "gatsby-image";
-import { Layout } from "../../components/layout";
-import { TagCollection } from "../../components/tagCollection";
-import { PostSnippet } from "../../types";
-import { SEO } from "../../components/seo";
+import React, { FunctionComponent } from 'react';
+import { graphql } from 'gatsby';
+import { FluidObject } from 'gatsby-image';
+import { Layout } from '../../components/layout';
+import { TagCollection } from '../../components/tagCollection';
+import { PostSnippet } from '../../types';
+import { SEO } from '../../components/seo';
 
 interface Post {
   node: {
@@ -75,7 +75,7 @@ export const Page: FunctionComponent<QueryData> = ({ data, pageContext }) => {
       imgAlt: node.frontmatter.imgAlt,
       tags: node.frontmatter.tags,
       publishedDate: new Date(node.frontmatter.publishedDate),
-    })
+    }),
   );
   return (
     <>

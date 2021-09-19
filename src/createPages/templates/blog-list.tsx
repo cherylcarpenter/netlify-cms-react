@@ -1,10 +1,10 @@
-import React, { FunctionComponent } from "react";
-import { graphql } from "gatsby";
-import { FluidObject } from "gatsby-image";
-import { Layout } from "../../components/layout";
-import { PostSnippet } from "../../types";
-import { BlogList } from "../../components/blogList";
-import { SEO } from "../../components/seo";
+import React, { FunctionComponent } from 'react';
+import { graphql } from 'gatsby';
+import { FluidObject } from 'gatsby-image';
+import { Layout } from '../../components/layout';
+import { PostSnippet } from '../../types';
+import { BlogList } from '../../components/blogList';
+import { SEO } from '../../components/seo';
 
 interface Post {
   node: {

@@ -1,12 +1,12 @@
-import React, { FunctionComponent } from "react";
-import { graphql } from "gatsby";
-import { FluidObject } from "gatsby-image";
-import { Layout } from "../../components/layout";
-import { PostSnippet } from "../../types";
-import { FeaturePosts } from "../../components/featurePosts";
-import { RecentPosts } from "../../components/recentPosts";
-import { Pagination } from "../../components/pagination";
-import { SEO } from "../../components/seo";
+import React, { FunctionComponent } from 'react';
+import { graphql } from 'gatsby';
+import { FluidObject } from 'gatsby-image';
+import { Layout } from '../../components/layout';
+import { PostSnippet } from '../../types';
+import { FeaturePosts } from '../../components/featurePosts';
+import { RecentPosts } from '../../components/recentPosts';
+import { Pagination } from '../../components/pagination';
+import { SEO } from '../../components/seo';
 
 export const pageQuery = graphql`
   {
@@ -99,7 +99,7 @@ interface Home {
 }
 
 const Home: FunctionComponent<Home> = ({ data }) => {
-  const mapPostData = ({ node }: { node: Post["node"] }) => ({
+  const mapPostData = ({ node }: { node: Post['node'] }) => ({
     title: node.frontmatter.title,
     summary: node.frontmatter.description,
     href: node.fields.slug,

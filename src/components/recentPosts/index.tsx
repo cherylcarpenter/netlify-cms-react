@@ -1,1 +1,1 @@
-export * from "./recentPosts";
+export * from './recentPosts';

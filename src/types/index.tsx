@@ -1,6 +1,6 @@
-import { FluidObject } from "gatsby-image";
+import { FluidObject } from 'gatsby-image';
 
-type TemplateKey = "blog-post";
+type TemplateKey = 'blog-post';
 
 export interface Tag {
   label: string;

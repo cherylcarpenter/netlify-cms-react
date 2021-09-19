@@ -1,6 +1,6 @@
-import React, { FunctionComponent, useState } from "react";
-import { navigate } from "gatsby";
-import { Layout } from "../components/layout";
+import React, { FunctionComponent, useState } from 'react';
+import { navigate } from 'gatsby';
+import { Layout } from '../components/layout';
 
 const createFormDataObj = (data: any) => {
   const formData = new FormData();
@@ -10,19 +10,19 @@ const createFormDataObj = (data: any) => {
   return formData as any;
 };
 
-const FORM_NAME = "Contact Form";
+const FORM_NAME = 'Contact Form';
 
 export const NotFound: FunctionComponent = () => {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [message, setMessage] = useState("");
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [message, setMessage] = useState('');
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     // This `data` object is what's passed to the createFormDataObj. It needs all of your form fields, where the key is the name= attribute and the value is the value=
     const data = {
-      "form-name": FORM_NAME,
+      'form-name': FORM_NAME,
       FirstName: firstName,
       LastName: lastName,
       Email: email,
@@ -30,12 +30,12 @@ export const NotFound: FunctionComponent = () => {
       Message: message,
     };
     // This POSTs your encoded form to Netlify with the required headers (for text; headers will be different for POSTing a file) and, on success, redirects to the custom success page using Gatsby's `navigate` helper function that we imported at the top
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: new URLSearchParams(createFormDataObj(data)).toString(),
     })
-      .then(() => navigate("/contact-success"))
+      .then(() => navigate('/contact-success'))
       // eslint-disable-next-line no-alert
       .catch((error) => alert(error));
     // This is required to prevent the default onSubmit behavior
@@ -162,7 +162,7 @@ export const NotFound: FunctionComponent = () => {
                       id="message"
                       rows={4}
                       className="form-textarea block w-full transition ease-in-out duration-150 sm:text-sm sm:leading-5"
-                      defaultValue={""}
+                      defaultValue={''}
                     />
                   </div>
                 </div>

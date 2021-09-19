@@ -1,6 +1,6 @@
-import React, { FunctionComponent } from "react";
-import Image from "gatsby-image";
-import { PostSnippet } from "../../types";
+import React, { FunctionComponent } from 'react';
+import Image from 'gatsby-image';
+import { PostSnippet } from '../../types';
 
 export interface FeaturePosts {
   featurePosts: PostSnippet[];
@@ -32,7 +32,7 @@ export const FeaturePost: FunctionComponent<PostSnippet> = ({
               <span key={index}>
                 <a href={`/tags/${tag}`} className="hover:underline">
                   #{tag}
-                </a>{" "}
+                </a>{' '}
               </span>
             ))}
           </p>

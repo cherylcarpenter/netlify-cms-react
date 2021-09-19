@@ -1,6 +1,6 @@
-import React, { FunctionComponent } from "react";
-import Image from "gatsby-image";
-import { PostSnippet } from "../../types";
+import React, { FunctionComponent } from 'react';
+import Image from 'gatsby-image';
+import { PostSnippet } from '../../types';
 
 export interface PostList {
   posts: PostSnippet[];
