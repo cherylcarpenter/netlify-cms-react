@@ -108,13 +108,12 @@ const Home: FunctionComponent<Home> = ({ data }) => {
     tags: node.frontmatter.tags,
     publishedDate: new Date(node.frontmatter.publishedDate),
   });
-  const featuredPostData: PostSnippet[] = data.featuredPosts.edges.map(
-    mapPostData
-  );
+  const featuredPostData: PostSnippet[] =
+    data.featuredPosts.edges.map(mapPostData);
   const recentPostData: PostSnippet[] = data.recentPosts.edges.map(mapPostData);
   return (
     <>
-      <SEO title="Home" image="/logo.png"/>
+      <SEO title="Home" image="/logo.png" />
       <Layout>
         <FeaturePosts featurePosts={featuredPostData} />
         <RecentPosts recentPosts={recentPostData} />

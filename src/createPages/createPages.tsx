@@ -44,6 +44,7 @@ export const createPages = async ({
     }
   `);
   if (result.errors) {
+    // eslint-disable-next-line no-console
     console.error(result.errors);
     throw new Error("Unexpected error from graphql query during create pages");
   }

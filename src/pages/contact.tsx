@@ -36,6 +36,7 @@ export const NotFound: FunctionComponent = () => {
       body: new URLSearchParams(createFormDataObj(data)).toString(),
     })
       .then(() => navigate("/contact-success"))
+      // eslint-disable-next-line no-alert
       .catch((error) => alert(error));
     // This is required to prevent the default onSubmit behavior
     e.preventDefault();

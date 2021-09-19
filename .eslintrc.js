@@ -32,12 +32,18 @@ module.exports = {
         extensions: [".js", ".jsx", ".ts", ".tsx"],
       },
     },
+    react: {
+      version: "detect",
+    },
   },
   rules: {
     "import/extensions": "off",
     "react/display-name": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/no-explicit-any": "off",
     "import/prefer-default-export": "off",
+    "global-require": "off",
     "react/prop-types": "off",
     "import/no-extraneous-dependencies": [
       "error",
