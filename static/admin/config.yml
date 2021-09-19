@@ -27,3 +27,10 @@ collections:
       - {label: "Image Caption", name: "imgAlt", widget: string}
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
+  - name: "portfolio"
+    label: "Portfolio"
+    folder: "content/portfolio"
+    create: true
+    slug: "{{portfolio}}"
+      - {label: "Template", name: "template", widget: "hidden", default: "blog-post"}
+      - {label: "Title", name: "title", widget: "string"}
