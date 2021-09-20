@@ -1,6 +1,6 @@
 import seo from '../partials/seo';
 
-const page = {
+const home = {
   file: 'content/pages/home.md',
   label: 'Home',
   name: 'Home',
@@ -28,4 +28,4 @@ const page = {
   ],
 };
 
-export default page;
+export default home;
