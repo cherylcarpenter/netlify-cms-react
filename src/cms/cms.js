@@ -1,6 +1,6 @@
 import CMS from 'netlify-cms-app';
-import pages from '@cms/pages';
-import posts from '@cms/collections/posts';
+import pages from './pages/index';
+import posts from './collections/posts';
 
 window.CMS_MANUAL_INIT = true;
 
