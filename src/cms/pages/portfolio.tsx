@@ -1,9 +1,9 @@
 import seo from '../partials/seo';
 
 const portfolio = {
-  file: 'content/pages/blog.md',
-  label: 'Blog',
-  name: 'Blog',
+  file: 'content/pages/portfolio.md',
+  label: 'Portfolio',
+  name: 'Portfolio',
   fields: [
     {
       label: 'Layout',
