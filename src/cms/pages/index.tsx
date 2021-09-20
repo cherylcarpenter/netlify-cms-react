@@ -6,6 +6,8 @@ import portfolio from './portfolio';
 const pages = {
   name: 'pages',
   label: 'Pages',
+  folder: 'content/pages',
+  create: true,
   files: [home, about, blog, portfolio],
 };
 

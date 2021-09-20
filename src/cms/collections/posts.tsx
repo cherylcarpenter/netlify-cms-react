@@ -1,9 +1,10 @@
 import seo from '../partials/seo';
 
 const posts = {
-  file: 'content/pages/posts.md',
   label: 'Posts',
   name: 'Posts',
+  folder: 'content/blog',
+
   fields: [
     {
       label: 'Layout',
