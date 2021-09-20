@@ -1,10 +1,5 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+const path = require('path');
 
-// You can delete this file if you're not using it
 require('ts-node').register({
   compilerOptions: {
     module: 'commonjs',
@@ -14,3 +9,15 @@ require('ts-node').register({
 
 // typescript files
 exports.createPages = require('./src/createPages/createPages').createPages;
+
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    resolve: {
+      alias: {
+        '@components': path.resolve(__dirname, 'src/components'),
+        '@static': path.resolve(__dirname, 'static'),
+        '@cms': path.resolve(__dirname, 'src/cms'),
+      },
+    },
+  });
+};
