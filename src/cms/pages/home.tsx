@@ -21,9 +21,11 @@ const home = {
       label: 'Title',
       name: 'title',
       widget: 'string',
-      default: '',
+      default: 'Home',
       required: false,
     },
+    { label: 'Publish Date', name: 'publishedDate', widget: 'datetime' },
+    { label: 'Description', name: 'description', widget: 'text' },
     seo,
   ],
 };

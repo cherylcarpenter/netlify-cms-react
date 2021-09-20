@@ -13,6 +13,7 @@ const config = {
     repo: 'https://github.com/cherylcarpenter/netlify-cms-react',
     branch: BRANCH || 'master',
     auth_type: 'github',
+    local_backend: true,
   },
   media_folder: '/static/img',
   public_folder: '/img',
