@@ -10,6 +10,7 @@ const config = {
   load_config_file: false,
   backend: {
     name: 'github',
+    repo: 'https://github.com/cherylcarpenter/netlify-cms-react',
     branch: BRANCH || 'master',
   },
   media_folder: '/static/img',
