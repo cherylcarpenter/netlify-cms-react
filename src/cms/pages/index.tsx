@@ -7,6 +7,7 @@ const pages = {
   name: 'pages',
   label: 'Pages',
   folder: 'content/pages',
+  file: 'content/pages/index.md',
   create: true,
   files: [home, about, blog, portfolio],
 };

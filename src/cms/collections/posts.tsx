@@ -4,7 +4,8 @@ const posts = {
   label: 'Posts',
   name: 'Posts',
   folder: 'content/blog',
-
+  file: 'content/blog/index.md',
+  create: true,
   fields: [
     {
       label: 'Layout',
