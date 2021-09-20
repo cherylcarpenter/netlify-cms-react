@@ -9,9 +9,10 @@ const { BRANCH } = process.env;
 const config = {
   load_config_file: false,
   backend: {
-    name: 'github',
+    name: 'git-gateway',
     repo: 'https://github.com/cherylcarpenter/netlify-cms-react',
     branch: BRANCH || 'master',
+    auth_type: 'github',
   },
   media_folder: '/static/img',
   public_folder: '/img',
